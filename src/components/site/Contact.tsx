@@ -10,13 +10,13 @@ import {
 import { Reveal } from "./Reveal";
 
 const services = [
-  "Website Development",
-  "Mobile App Development",
-  "UI/UX Design",
-  "Software Development",
-  "Cloud Solutions",
+  "Websites",
+  "Mobile Apps",
+  "UI/UX",
+  "Software",
+  "Cloud",
   "E-Commerce",
-  "AI & Automation",
+  "AI Automation",
   "Other",
 ];
 const budgets = ["< Rs. 50k", "Rs. 50k - 2L", "Rs. 2L - 5L", "Rs. 5L+", "Not sure yet"];

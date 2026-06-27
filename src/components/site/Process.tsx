@@ -33,19 +33,21 @@ export function Process() {
                 <Reveal
                   key={s.title}
                   delay={i * 60}
-                  className="flex w-[44vw] min-w-[9.25rem] max-w-[11rem] shrink-0 snap-start sm:w-auto sm:min-w-0 sm:max-w-none sm:snap-auto"
+                  className="flex w-[52vw] max-w-[12.5rem] shrink-0 snap-start sm:w-auto sm:max-w-none sm:snap-auto"
                 >
-                  <div className="flex min-h-[122px] w-full flex-col rounded-2xl border border-border bg-card p-3 text-center shadow-soft transition-all hover:-translate-y-1.5 hover:shadow-elegant sm:min-h-0 sm:p-5">
+                  <div className="flex h-[136px] w-full flex-col overflow-hidden rounded-2xl border border-border bg-card p-3 text-center shadow-soft transition-all hover:shadow-elegant sm:h-auto sm:min-h-0 sm:p-5 sm:hover:-translate-y-1.5">
                     <span className="mx-auto flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-flag text-primary-foreground shadow-glow-red sm:h-12 sm:w-12">
                       <s.icon className="h-4 w-4 sm:h-5 sm:w-5" />
                     </span>
                     <div className="mt-2 text-[10px] font-bold uppercase text-primary sm:mt-3 sm:text-xs">
                       Step {i + 1}
                     </div>
-                    <h3 className="mt-1 font-display text-sm font-bold text-foreground sm:text-base">
+                    <h3 className="mt-1 font-display text-[13px] font-bold text-foreground sm:text-base">
                       {s.title}
                     </h3>
-                    <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">{s.desc}</p>
+                    <p className="mt-1.5 overflow-hidden text-xs leading-relaxed text-muted-foreground">
+                      {s.desc}
+                    </p>
                   </div>
                 </Reveal>
               ))}

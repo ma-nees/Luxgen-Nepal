@@ -35,8 +35,8 @@ export function Portfolio() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Portfolio"
-          title="Work that delivers results"
-          subtitle="A selection of products we've built for startups, businesses, schools, and NGOs."
+          title="Recent work"
+          subtitle="Selected websites, apps, and platforms we've built."
         />
         <div className="scrollbar-none -mx-4 mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-3 sm:mx-auto sm:mt-14 sm:grid sm:max-w-6xl sm:snap-none sm:grid-cols-2 sm:items-stretch sm:gap-6 sm:overflow-visible sm:px-0 lg:grid-cols-3 xl:grid-cols-3">
           {visibleProjects.map((p, i) => {
@@ -48,7 +48,7 @@ export function Portfolio() {
                 delay={i * 60}
                 className="flex w-[60vw] min-w-[13rem] max-w-[15.5rem] shrink-0 snap-start sm:h-full sm:w-auto sm:min-w-0 sm:max-w-none sm:flex-1 sm:flex-col"
               >
-                <article className="group flex h-[19rem] w-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-soft ring-1 ring-transparent transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/30 hover:shadow-elegant hover:ring-primary/10 sm:h-[28rem] sm:rounded-3xl lg:h-[29rem] xl:h-[28rem]">
+                <article className="group flex h-[21.5rem] w-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-soft ring-1 ring-transparent transition-all duration-300 hover:border-primary/30 hover:shadow-elegant hover:ring-primary/10 sm:h-[28rem] sm:rounded-3xl sm:hover:-translate-y-1.5 lg:h-[29rem] xl:h-[28rem]">
                   <div className={`relative shrink-0 overflow-hidden ${p.grad} p-2.5 sm:p-4`}>
                     <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl sm:rounded-2xl">
                       {imageSrc && (

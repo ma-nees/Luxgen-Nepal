@@ -63,16 +63,16 @@ export function Features() {
                 <Reveal
                   key={f.title}
                   delay={i * 70}
-                  className="flex w-[56vw] min-w-[11rem] max-w-[13.25rem] shrink-0 snap-start sm:w-auto sm:min-w-0 sm:max-w-none sm:snap-auto"
+                  className="flex w-[52vw] max-w-[12.5rem] shrink-0 snap-start sm:w-auto sm:max-w-none sm:snap-auto"
                 >
-                  <div className="group flex min-h-[124px] w-full flex-col rounded-2xl border border-border bg-card p-3 shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:shadow-elegant sm:min-h-0 sm:p-7">
+                  <div className="group flex h-[136px] w-full flex-col overflow-hidden rounded-2xl border border-border bg-card p-3 shadow-soft transition-all duration-300 hover:shadow-elegant sm:h-auto sm:min-h-0 sm:p-7 sm:hover:-translate-y-1.5">
                     <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-flag text-primary-foreground shadow-glow-red transition-transform group-hover:scale-110 sm:h-12 sm:w-12">
                       <f.icon className="h-4 w-4 sm:h-6 sm:w-6" />
                     </span>
                     <h3 className="mt-2.5 font-display text-[13px] font-bold text-foreground sm:mt-5 sm:text-lg">
                       {f.title}
                     </h3>
-                    <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground sm:text-sm">
+                    <p className="mt-1.5 overflow-hidden text-xs leading-relaxed text-muted-foreground sm:text-sm">
                       {f.desc}
                     </p>
                   </div>

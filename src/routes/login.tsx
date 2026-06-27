@@ -154,7 +154,7 @@ function Login() {
                 type="button"
                 onClick={continueWithGoogle}
                 disabled={isLoading}
-                className="relative h-11 w-full gap-2 bg-white text-gray-800 shadow-sm hover:bg-gray-50 hover:shadow-md dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
+                className="relative h-11 w-full gap-2 bg-white text-gray-800 shadow-sm hover:bg-gray-50 hover:shadow-md"
               >
                 {isLoading ? (
                   <Loader2 className="h-5 w-5 animate-spin text-gray-500" />

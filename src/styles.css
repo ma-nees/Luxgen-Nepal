@@ -7,11 +7,11 @@
  * The @theme inline block maps CSS custom properties to Tailwind utility
  * classes (e.g. --color-primary -> bg-primary, text-primary).
  *
- * The :root and .dark blocks define the actual color values using oklch.
+ * The :root block defines the actual color values using oklch.
  * All colors MUST use oklch format.
  *
  * To add a new semantic color:
- * 1. Add the variable to :root (light value) and .dark (dark value)
+ * 1. Add the variable to :root
  * 2. Register it in @theme inline as --color-<name>: var(--<name>)
  */
 
@@ -125,46 +125,6 @@
   /* Glass */
   --glass-bg: color-mix(in oklab, #ffffff 70%, transparent);
   --glass-border: color-mix(in oklab, #ffffff 60%, transparent);
-}
-
-.dark {
-  --nepal-snow: oklch(0.24 0.03 265);
-  --background: oklch(0.165 0.035 265.75);
-  --foreground: oklch(0.97 0.005 247.86);
-  --card: oklch(0.21 0.038 265.75);
-  --card-foreground: oklch(0.97 0.005 247.86);
-  --popover: oklch(0.21 0.038 265.75);
-  --popover-foreground: oklch(0.97 0.005 247.86);
-  --primary: oklch(0.62 0.225 18.2);
-  --primary-foreground: oklch(0.99 0.003 247.86);
-  --secondary: oklch(0.5 0.17 264);
-  --secondary-foreground: oklch(0.99 0.003 247.86);
-  --muted: oklch(0.24 0.03 265);
-  --muted-foreground: oklch(0.7 0.03 257.4);
-  --accent: oklch(0.28 0.05 264);
-  --accent-foreground: oklch(0.92 0.02 264);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.99 0.003 247.86);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.62 0.225 18.2);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.21 0.038 265.75);
-  --sidebar-foreground: oklch(0.97 0.005 247.86);
-  --sidebar-primary: oklch(0.62 0.225 18.2);
-  --sidebar-primary-foreground: oklch(0.99 0.003 247.86);
-  --sidebar-accent: oklch(0.28 0.05 264);
-  --sidebar-accent-foreground: oklch(0.92 0.02 264);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.62 0.225 18.2);
-
-  --glass-bg: color-mix(in oklab, #0f172a 55%, transparent);
-  --glass-border: color-mix(in oklab, #ffffff 14%, transparent);
-  --shadow-elegant: 0 24px 60px -24px color-mix(in oklab, #000000 60%, transparent);
 }
 
 @layer base {
