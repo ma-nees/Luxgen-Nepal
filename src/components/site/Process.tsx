@@ -14,28 +14,43 @@ const steps = [
 
 export function Process() {
   return (
-    <section className="bg-background py-20 md:py-28">
+    <section className="bg-background py-10 sm:py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="How We Work"
           title="A proven development process"
           subtitle="A transparent, milestone-driven workflow that keeps you informed at every stage."
         />
-        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7">
-          {steps.map((s, i) => (
-            <Reveal key={s.title} delay={i * 60}>
-              <div className="relative h-full rounded-2xl border border-border bg-card p-5 text-center shadow-soft transition-all hover:-translate-y-1.5 hover:shadow-elegant">
-                <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-gradient-flag text-primary-foreground shadow-glow-red">
-                  <s.icon className="h-5 w-5" />
-                </span>
-                <div className="mt-3 text-xs font-bold uppercase tracking-widest text-primary">
-                  Step {i + 1}
-                </div>
-                <h3 className="mt-1 text-base font-bold text-foreground">{s.title}</h3>
-                <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">{s.desc}</p>
-              </div>
-            </Reveal>
-          ))}
+        <div className="mt-8 sm:mt-14">
+          <div className="-mx-4 sm:mx-0">
+            <div
+              className="scrollbar-none flex snap-x snap-mandatory scroll-px-4 gap-4 overflow-x-auto overscroll-x-contain px-4 pb-3 sm:grid sm:grid-cols-2 sm:gap-4 sm:overflow-visible sm:px-0 lg:grid-cols-4 xl:grid-cols-7"
+              role="list"
+              aria-label="How we work carousel"
+              style={{ WebkitOverflowScrolling: "touch" }}
+            >
+              {steps.map((s, i) => (
+                <Reveal
+                  key={s.title}
+                  delay={i * 60}
+                  className="flex w-[44vw] min-w-[9.25rem] max-w-[11rem] shrink-0 snap-start sm:w-auto sm:min-w-0 sm:max-w-none sm:snap-auto"
+                >
+                  <div className="flex min-h-[122px] w-full flex-col rounded-2xl border border-border bg-card p-3 text-center shadow-soft transition-all hover:-translate-y-1.5 hover:shadow-elegant sm:min-h-0 sm:p-5">
+                    <span className="mx-auto flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-flag text-primary-foreground shadow-glow-red sm:h-12 sm:w-12">
+                      <s.icon className="h-4 w-4 sm:h-5 sm:w-5" />
+                    </span>
+                    <div className="mt-2 text-[10px] font-bold uppercase text-primary sm:mt-3 sm:text-xs">
+                      Step {i + 1}
+                    </div>
+                    <h3 className="mt-1 font-display text-sm font-bold text-foreground sm:text-base">
+                      {s.title}
+                    </h3>
+                    <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">{s.desc}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

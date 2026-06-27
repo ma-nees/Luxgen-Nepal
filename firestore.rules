@@ -1,0 +1,35 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isAdmin() {
+      return request.auth != null
+        && request.auth.token.email == "luxgen.stup@gmail.com";
+    }
+
+    match /siteContent/teamMembers/members/{memberId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /siteContent/projects/items/{projectId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /siteContent/companyLinks {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /contactRequests/{requestId} {
+      allow create: if true;
+      allow read, delete: if isAdmin();
+      allow update: if isAdmin()
+        || (
+          request.resource.data.diff(resource.data).affectedKeys().hasOnly(["emailStatus"])
+          && request.resource.data.emailStatus in ["sent", "failed"]
+        );
+    }
+  }
+}

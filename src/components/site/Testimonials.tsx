@@ -41,25 +41,27 @@ export function Testimonials() {
   const t = testimonials[i];
 
   return (
-    <section className="bg-muted py-20 md:py-28">
+    <section className="bg-muted py-10 sm:py-20 md:py-28">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Testimonials"
           title="Loved by clients worldwide"
-          subtitle="From Nepal to across the globe — here's what partners say about working with us."
+          subtitle="From Nepal to across the globe  here's what partners say about working with us."
         />
-        <div className="mt-12 rounded-3xl border border-border bg-card p-8 shadow-elegant md:p-12">
-          <Quote className="h-10 w-10 text-primary/30" />
-          <p className="mt-4 text-xl font-medium leading-relaxed text-foreground md:text-2xl">
+        <div className="mt-7 rounded-2xl border border-border bg-card p-4 shadow-elegant sm:mt-12 sm:rounded-3xl sm:p-8 md:p-12">
+          <Quote className="h-6 w-6 text-primary/30 sm:h-10 sm:w-10" />
+          <p className="mt-2.5 font-display text-sm font-medium leading-relaxed text-foreground sm:mt-4 sm:text-xl md:text-2xl">
             "{t.quote}"
           </p>
-          <div className="mt-6 flex items-center justify-between">
+          <div className="mt-4 flex flex-col gap-3 sm:mt-6 sm:flex-row sm:items-center sm:justify-between sm:gap-5">
             <div>
-              <div className="font-bold text-foreground">{t.name}</div>
-              <div className="text-sm text-muted-foreground">{t.role}</div>
-              <div className="mt-1.5 flex gap-0.5 text-primary">
+              <div className="font-display text-sm font-bold text-foreground sm:text-base">
+                {t.name}
+              </div>
+              <div className="text-xs text-muted-foreground sm:text-sm">{t.role}</div>
+              <div className="mt-1 flex gap-0.5 text-primary sm:mt-1.5">
                 {Array.from({ length: 5 }).map((_, s) => (
-                  <Star key={s} className="h-4 w-4 fill-current" />
+                  <Star key={s} className="h-3.5 w-3.5 fill-current sm:h-4 sm:w-4" />
                 ))}
               </div>
             </div>
@@ -67,20 +69,20 @@ export function Testimonials() {
               <button
                 onClick={() => setI((p) => (p - 1 + count) % count)}
                 aria-label="Previous testimonial"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground/80 transition-colors hover:bg-muted"
+                className="flex h-8 w-8 items-center justify-center rounded-full border border-border text-foreground/80 transition-colors hover:bg-muted sm:h-10 sm:w-10"
               >
-                <ChevronLeft className="h-5 w-5" />
+                <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
               </button>
               <button
                 onClick={() => setI((p) => (p + 1) % count)}
                 aria-label="Next testimonial"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground/80 transition-colors hover:bg-muted"
+                className="flex h-8 w-8 items-center justify-center rounded-full border border-border text-foreground/80 transition-colors hover:bg-muted sm:h-10 sm:w-10"
               >
-                <ChevronRight className="h-5 w-5" />
+                <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
               </button>
             </div>
           </div>
-          <div className="mt-6 flex justify-center gap-2">
+          <div className="mt-4 flex justify-center gap-1.5 sm:mt-6 sm:gap-2">
             {testimonials.map((_, d) => (
               <button
                 key={d}
