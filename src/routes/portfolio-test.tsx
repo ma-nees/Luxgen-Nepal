@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Navbar } from "@/components/site/Navbar";
-import { Portfolio } from "@/components/site/Portfolio";
-import { Footer } from "@/components/site/Footer";
+import { Navbar } from "../components/site/Navbar";
+import { Portfolio } from "../components/site/Portfolio";
+import { Footer } from "../components/site/Footer";
 
 export const Route = createFileRoute("/portfolio-test")({
   head: () => ({
