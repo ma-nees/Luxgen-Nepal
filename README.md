@@ -3,6 +3,7 @@
 LuxGen Nepal is a modern IT services website for showcasing web development, mobile app development, UI/UX design, cloud solutions, portfolio projects, pricing, team members, and client contact workflows.
 
 The project is built as a responsive marketing and admin-enabled web app for a Nepal-based digital solutions company serving local and global clients.
+live : https://luxgen-nepal.vercel.app/
 
 ## Features
 
