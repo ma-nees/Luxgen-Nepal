@@ -62,3 +62,4 @@ Do not commit `.env` files. They are intentionally ignored by Git.
 ## Project Goal
 
 LuxGen Nepal aims to present affordable, high-quality digital solutions with a polished user experience, clear service offerings, real project showcases, and a simple way for clients to request consultations.
+"Yep"
